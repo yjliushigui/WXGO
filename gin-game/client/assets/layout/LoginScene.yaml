@@ -1,0 +1,42 @@
+res:
+  image:
+    login_bg: /static/assets/image/登录/bg1.jpg
+    login_btn_weixin: /static/assets/image/登录/button1.png
+    login_btn_youke: /static/assets/image/登录/button2.png
+    login_gou: /static/assets/image/登录/gou.png
+    login_tips: /static/assets/image/登录/tips.png
+    login_user_agreement: /static/assets/image/登录/user-agreement.png
+    login_logo: /static/assets/image/登录/logo2.png
+
+layout:
+  - sprite:
+      name: 背景
+      key: login_bg
+  - button:
+      name: 微信登录
+      key: login_btn_weixin
+      x: 212
+      y: 411
+  - button:
+      name: 游客登录
+      key: login_btn_youke
+      x: 675
+      y: 411
+  - sprite:
+      name: 用户协议tips
+      key: login_tips
+      x: 113
+      y: 651
+  - sprite:
+      key: login_user_agreement
+      x: 450
+      y: 572
+  - sprite:
+      name: 用户协议勾
+      key: login_gou
+      x: 455
+      y: 580
+  - sprite:
+      key: login_logo
+      x: 430
+      y: 145

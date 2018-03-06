@@ -1,0 +1,7 @@
+{
+      // Relative root location of the index.html file
+  "mix.rootPath": "/client",
+  
+    // Port number for the Live Server
+    "mix.port": 18181
+}

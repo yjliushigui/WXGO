@@ -1,0 +1,196 @@
+res:
+  image:
+    hall_bg: /static/assets/image/大厅/背景1.jpg
+    hall_user_bg: /static/assets/image/大厅/用户栏-底.png
+    hall_user_frame: /static/assets/image/大厅/用户栏-头像框底部.png
+    hall_user_photo: /static/assets/image/大厅/用户栏-默认头像.png
+    hall_user_gold: /static/assets/image/大厅/用户栏-金币.png
+    hall_user_gold_bar: /static/assets/image/大厅/用户栏-金币底框.png
+    hall_user_fangka: /static/assets/image/大厅/用户栏-房卡.png
+    hall_user_fangka_bar: /static/assets/image/大厅/用户栏-房卡底框.png
+    hall_broadcast_bar: /static/assets/image/大厅/跑马灯-底.png
+    hall_bottom_menu_bar: /static/assets/image/大厅/菜单-底.png
+    hall_bottom_menu_setting: /static/assets/image/大厅/菜单-设置.png
+    hall_bottom_menu_email: /static/assets/image/大厅/菜单-邮件.png
+    hall_bottom_menu_rule: /static/assets/image/大厅/菜单-玩法.png
+    hall_bottom_menu_share: /static/assets/image/大厅/菜单-分享.png
+    hall_bottom_menu_feedback: /static/assets/image/大厅/菜单-反馈.png
+    hall_bottom_menu_score: /static/assets/image/大厅/菜单-战绩.png
+    hall_bottom_menu_mall: /static/assets/image/大厅/菜单-商城.png
+    hall_bottom_menu_red_point: /static/assets/image/大厅/菜单-红点提示.png
+    hall_role: /static/assets/image/大厅/角色.png
+
+# 中间区域资源
+    hall_1_toplist: /static/assets/image/大厅/排行榜-底.png
+    hall_1_toplist_title: /static/assets/image/大厅/排行榜-好友排行标题.png
+    hall_1_toplist_bottom_bar: /static/assets/image/大厅/排行榜-玩家底.png
+
+    hall_1_btn_xueliu_mj: /static/assets/image/大厅/房间入口-血流.png
+    hall_1_btn_xuezhan_mj: /static/assets/image/大厅/房间入口-血战.png
+    hall_1_btn_create_room: /static/assets/image/大厅/房间入口-创建.png
+
+layout:
+  - sprite:
+      name: 背景
+      key: hall_bg
+  - sprite:
+      key: hall_role
+      x: 388
+      y: 70
+
+# 顶部用户栏+广播
+  - sprite:
+      key: hall_user_bg
+  - sprite:
+      key: hall_user_photo
+      x: 7
+      y: 6
+  - sprite:
+      key: hall_user_frame
+      x: -5
+      y: -3
+  - text:
+      text: 用户名字六个字
+      font: "微软雅黑"
+      style:
+        fontSize: 24
+        fontWeight: normal
+        fill: '#FFF'
+      x: 80
+      y: 5
+  - sprite:
+      key: hall_user_gold_bar
+      x: 81
+      y: 35
+  - sprite:
+      key: hall_user_gold
+      x: 80
+      y: 35
+  - text:
+      text: 1561.1万
+      font: "微软雅黑"
+      style:
+        fontSize: 20
+        fontWeight: normal
+        fill: '#FFF'
+      x: 124
+      y: 38
+  - sprite:
+      key: hall_user_fangka_bar
+      x: 265
+      y: 35
+  - sprite:
+      key: hall_user_fangka
+      x: 250
+      y: 35
+  - text:
+      text: '房卡: 999张'
+      font: "微软雅黑"
+      style:
+        fontSize: 20
+        fontWeight: normal
+        fill: '#FFF'
+      x: 296
+      y: 38
+  - sprite:
+      key: hall_broadcast_bar
+      x: 510
+      y: 15
+  - text:
+      text: '【系统】'
+      font: "微软雅黑"
+      style:
+        fontSize: 24
+        fontWeight: normal
+        fill: '#FF3'
+      x: 520
+      y: 21
+  - text:
+      text: '恭喜玩家 Ao怡Baby 在血战场一把赢了164万！真是羡煞旁人'
+      font: "微软雅黑"
+      style:
+        fontSize: 24
+        fontWeight: normal
+        fill: '#FFF'
+      x: 630
+      y: 21
+
+# 底部菜单栏
+  - sprite:
+      key: hall_bottom_menu_bar
+      x: 25
+      y: 673
+
+  - sprite:
+      key: hall_bottom_menu_setting
+      x: 130
+      y: 620
+
+  - sprite:
+      key: hall_bottom_menu_email
+      x: 278
+      y: 620
+
+  - sprite:
+      key: hall_bottom_menu_red_point
+      x: 328
+      y: 618    
+
+  - sprite:
+      key: hall_bottom_menu_share
+      x: 430
+      y: 620
+
+  - sprite:
+      key: hall_bottom_menu_rule
+      x: 590
+      y: 620
+
+  - sprite:
+      key: hall_bottom_menu_feedback
+      x: 750
+      y: 620
+
+  - sprite:
+      key: hall_bottom_menu_score
+      x: 900
+      y: 620
+
+  - sprite:
+      key: hall_bottom_menu_mall
+      x: 1045
+      y: 605
+
+
+# 中间区域预览
+  - sprite:
+      key: hall_1_toplist
+      x: 15
+      y: 130
+  - sprite:
+      key: hall_1_toplist_title
+      x: 106
+      y: 156
+  - sprite:
+      key: hall_1_toplist_bottom_bar
+      x: 30
+      y: 205
+      
+
+  - sprite:
+      key: hall_1_btn_xueliu_mj
+      x: 820
+      y: 130
+
+  - sprite:
+      key: hall_1_btn_xueliu_mj
+      x: 820
+      y: 280
+
+  - button:
+      name: 创建房间
+      key: hall_1_btn_create_room
+      x: 820
+      y: 430
+
+      

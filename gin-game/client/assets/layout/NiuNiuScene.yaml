@@ -1,0 +1,388 @@
+res:
+  image:
+    niuniu_bg: /static/assets/image/经典牛牛/背景.png
+    niuniu_user_photo_bg: /static/assets/image/经典牛牛/头像框.png
+    niuniu_user_photo: /static/assets/image/经典牛牛/头像.png
+    niuniu_user_vip: /static/assets/image/经典牛牛/VIP.png
+    niuniu_user_gold: /static/assets/image/经典牛牛/金币.png
+    niuniu_user_room_owner: /static/assets/image/经典牛牛/房主.png
+    niuniu_user_dealer: /static/assets/image/经典牛牛/庄.png
+    niuniu_start_button: /static/assets/image/经典牛牛/开始游戏.png
+    niuniu_invert_button: /static/assets/image/经典牛牛/邀请好友.png
+    niuniu_title: /static/assets/image/经典牛牛/牛牛标题.png
+    niuniu_user_bar_h: /static/assets/image/经典牛牛/用户信息栏横.png
+    niuniu_user_bar_v: /static/assets/image/经典牛牛/用户信息栏竖.png
+    niuniu_ready: /static/assets/image/经典牛牛/准备.png
+    niuniu_top_bar: /static/assets/image/经典牛牛/顶栏.png
+    niuniu_bettery: /static/assets/image/经典牛牛/电量.png
+  sheet:
+    niuniu_poker: 155,216,/static/assets/image/经典牛牛/poker_big.png
+    # hall_user_self_bar: /static/assets/image/经典牛牛/金币玻璃底框.png
+    # hall_back: /static/assets/image/经典牛牛/icon_返回.png
+    # hall_setting: /static/assets/image/经典牛牛/icon_设置.png
+    # hall_gold_bar: /static/assets/image/经典牛牛/金币底.png
+#   json:
+    # pokers: '/static/assets/image/经典牛牛/牌/poker.json,/static/assets/image/经典牛牛/牌/poker.png'
+    
+
+layout:
+  - sprite:
+      name: 背景
+      key: niuniu_bg
+
+  - template:
+      type: group
+      name: 用户信息区横
+      children:
+        - shape:
+            draw: 矩形
+            width: 213
+            height: 96
+            fillAlpha: 0
+            lineWidth: 1
+        - sprite:
+            y: 1
+            key: niuniu_user_photo
+        - sprite:
+            y: 1
+            key: niuniu_user_photo_bg
+        - sprite:
+            key: niuniu_user_bar_h
+            x: 88
+            y: 30
+        - sprite:
+            key: niuniu_user_room_owner
+        - sprite:
+            key: niuniu_user_dealer
+            x: 52
+        - sprite:
+            key: niuniu_user_vip
+            x: 95
+            y: 20
+        - sprite:
+            key: niuniu_user_gold
+            x: 94
+            y: 66
+        - text:
+            text: 黑皮
+            x: 95
+            y: 43
+            font: "微软雅黑"
+            style:
+                fill: "#E8E6E8"
+                fontSize: 21
+        - text:
+            text: "1000"
+            x: 125
+            y: 67
+            font: "微软雅黑"
+            style:
+                fill: "#E8E6E8"
+                fontSize: 21
+
+  - template:
+      type: group
+      name: 用户信息区竖
+      children:
+        - shape:
+            draw: 矩形
+            width: 125
+            height: 169
+            fillAlpha: 0
+            lineWidth: 1
+        - sprite:
+            y: 2
+            x: 10
+            key: niuniu_user_photo
+        - sprite:
+            y: 2
+            x: 10
+            key: niuniu_user_photo_bg
+        - sprite:
+            key: niuniu_user_bar_h
+            y: 94
+        - text:
+            text: 黑皮
+            y: 99
+            x: 8
+            font: "微软雅黑"
+            style:
+                fill: "#E8E6E8"
+                fontSize: 21
+        - sprite:
+            key: niuniu_user_gold
+            x: 6
+            y: 126
+        - text:
+            text: "1000"
+            x: 36
+            y: 126
+            font: "微软雅黑"
+            style:
+                fill: "#E8E6E8"
+                fontSize: 21
+        # - sprite:
+        #     key: niuniu_ready
+        #     y: 95
+        #     x: 116
+
+  - clone:
+      x: 48
+      y: 589
+      template: 用户信息区横
+
+  - clone:
+      template: 用户信息区竖
+      x: 28
+      y: 300
+
+  - clone:
+      template: 用户信息区竖
+      x: 1127
+      y: 300
+  
+  - clone:
+      template: 用户信息区横
+      x: 152
+      y: 57
+
+  - clone:
+      template: 用户信息区横
+      x: 534
+      y: 57
+
+  - clone:
+      template: 用户信息区横
+      x: 923
+      y: 57
+
+  - group:
+      name: 自己的扑克区
+      x: 310
+      y: 516
+      children:
+        - sprite:
+            key: niuniu_poker
+            frame: 0
+            width: 134
+            height: 183
+        - sprite:
+            x: 136
+            key: niuniu_poker
+            frame: 0
+            width: 134
+            height: 183
+        - sprite:
+            x: 272
+            key: niuniu_poker
+            frame: 0
+            width: 134
+            height: 183
+        - sprite:
+            x: 408
+            key: niuniu_poker
+            frame: 0
+            width: 134
+            height: 183
+        - sprite:
+            x: 544
+            key: niuniu_poker
+            frame: 0
+            width: 134
+            height: 183
+
+  - template:
+      type: group
+      name: 扑克区模板
+      children:
+        - sprite:
+            key: niuniu_poker
+            frame: 0
+            width: 79
+            height: 107
+        - sprite:
+            x: 30
+            key: niuniu_poker
+            frame: 0
+            width: 79
+            height: 107
+        - sprite:
+            x: 60
+            key: niuniu_poker
+            frame: 0
+            width: 79
+            height: 107
+        - sprite:
+            x: 90
+            key: niuniu_poker
+            frame: 0
+            width: 79
+            height: 107
+        - sprite:
+            x: 120
+            key: niuniu_poker
+            frame: 0
+            width: 79
+            height: 107
+
+  - clone:
+      name: 下左扑克区
+      template: 扑克区模板
+      x: 150
+      y: 305
+
+  - clone:
+      name: 下右扑克区
+      template: 扑克区模板
+      x: 930
+      y: 305
+
+  - clone:
+      name: 上左扑克区
+      template: 扑克区模板
+      x: 216
+      y: 154
+
+  - clone:
+      name: 上中扑克区
+      template: 扑克区模板
+      x: 524
+      y: 154
+
+  - clone:
+      name: 上右扑克区
+      template: 扑克区模板
+      x: 847
+      y: 154
+
+  - button:
+      visible: false
+      name: 开始按钮
+      key: niuniu_start_button
+      y: 490
+
+  - button:
+      name: 邀请好友按钮
+      key: niuniu_invert_button
+
+  - text:
+      text: "说明：其他玩家也有准备按钮"
+      font: "微软雅黑"
+      name: 等待提示
+      style:
+        fill: "#000"
+        fontSize: 28
+        fontWeight: normal
+
+  - sprite:
+      name: 牛牛标题
+      key: niuniu_title
+  - sprite:
+      name: 牛牛顶栏
+      key: niuniu_top_bar
+  - text:
+      text: "房间号：000000"
+      font: "微软雅黑"
+      name: 牛牛房间号
+      style:
+        fill: "#FF0"
+        fontSize: 25
+        fontWeight: normal
+  - text:
+      text: "第 0 / 10 局"
+      font: "微软雅黑"
+      name: 牛牛局数
+      style:
+        fill: "#fff"
+        fontSize: 25
+        fontWeight: normal
+
+  - text:
+      text: "12:22"
+      font: "微软雅黑"
+      name: 牛牛时间
+      x: 1160
+      y: 16
+      style:
+        fill: "#8bc34a"
+        fontSize: 20
+        fontWeight: bold
+
+  - text:
+      text: "经典抢庄斗牛"
+      font: "微软雅黑"
+      name: 房间名称
+      x: 30
+      y: 15
+      style:
+        fill: "#8bc34a"
+        fontSize: 21
+        fontWeight: bold
+
+  - sprite: 
+      x: 1100
+      y: 18
+      key: niuniu_bettery
+
+  - group:
+        children:
+            - text:
+                name: 自己下注
+                x: 150
+                y: 570
+                text: "×25"
+                font: "微软雅黑"
+                style:
+                    fill: "#fff"
+                    fontSize: 26
+                    fontWeight: bold
+            - text:
+                x: 150
+                y: 283
+                name: 下左下注
+                text: "×25"
+                font: "微软雅黑"
+                style:
+                    fill: "#fff"
+                    fontSize: 20
+                    fontWeight: bold
+            - text:
+                x: 355
+                y: 125
+                name: 上左下注
+                text: "×25"
+                font: "微软雅黑"
+                style:
+                    fill: "#fff"
+                    fontSize: 20
+                    fontWeight: bold
+            - text:
+                x: 735
+                y: 125
+                name: 上中下注
+                text: "×25"
+                font: "微软雅黑"
+                style:
+                    fill: "#fff"
+                    fontSize: 20
+                    fontWeight: bold
+            - text:
+                x: 870
+                y: 125
+                name: 上右下注
+                text: "×25"
+                font: "微软雅黑"
+                style:
+                    fill: "#fff"
+                    fontSize: 22
+                    fontWeight: bold
+            - text:
+                x: 1085
+                y: 283
+                name: 下右下注
+                text: "×25"
+                font: "微软雅黑"
+                style:
+                    fill: "#fff"
+                    fontSize: 20
+                    fontWeight: bold

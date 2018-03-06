@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>mkToHtmlDemo</title>
+
+    <!--引入样式文件-->
+    <link rel="stylesheet" href="/static/md/css/editormd.css" />
+
+    <!--引入js文件-->
+    <script src="/static/assets/js/jquery-1.8.3.min.js"></script>
+    <script src="/static/md/lib/marked.min.js"></script>
+    <script src="/static/md/lib/prettify.min.js"></script>
+    <script src="/static/md/lib/raphael.min.js"></script>
+    <script src="/static/md/lib/underscore.min.js"></script>
+    <script src="/static/md/lib/sequence-diagram.min.js"></script>
+    <script src="/static/md/lib/flowchart.min.js"></script>
+    <script src="/static/md/lib/jquery.flowchart.min.js"></script>
+    <script src="/static/md/editormd.js"></script>
+</head>
+
+<body>
+<div id="test-editormd">
+    <textarea style="display:none;" id="ts"></textarea>
+</div>
+</body>
+<script type="text/javascript">
+    //    调用编辑器
+    var testEditor;
+    $(function() {
+        testEditor = editormd("test-editormd", {
+            width   : "1000px",
+            height  : 640,
+            syncScrolling : "single",
+            path:"/static/md/lib/"
+        });
+    });
+</script>
+</html>
+
+

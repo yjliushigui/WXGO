@@ -1,0 +1,135 @@
+res:
+  image:
+    game_day_bg: /static/assets/image/game_day_bg.png
+    countdown_hand: /static/assets/image/countdown_hand.png
+    howtoplay: /static/assets/image/howtoplay.png
+    icon_purchase_agoalposthit: /static/assets/image/icon_purchase_agoalposthit.png
+    icon_purchase_goal: /static/assets/image/icon_purchase_goal.png
+    icon_purchase_miss: /static/assets/image/icon_purchase_miss.png
+    soccer_ball: /static/assets/image/soccer_ball.png
+  xml:
+    pokers: '/static/assets/image/pokers.xml,/static/assets/image/pokers.png'
+  json:
+    countdown: '/static/assets/image/countdown.json,/static/assets/image/countdown.png'
+    shoot_result: '/static/assets/image/shoot_result.json,/static/assets/image/shoot_result.png'
+    voice_open: '/static/assets/image/voice_open.json,/static/assets/image/voice_open.png'
+    voice_close: '/static/assets/image/voice_close.json,/static/assets/image/voice_close.png'
+layout:
+  - sprite:
+      name: 背景
+      key: game_day_bg
+  - sprite:
+      name: 足球
+      key: soccer_ball
+      visible: false
+      x: -25
+      y: 294
+  - group:
+      x: 35
+      y: 15
+      name: 购买分布信息
+      children:
+        - sprite:
+            y: 32
+            name: 命中
+            key: icon_purchase_goal
+        - text:
+            name: 命中率
+            y: 63
+            x: 15
+            text: 40.00%
+            style:
+              fontSize: 12
+              fill: '#FFF'
+        - sprite:
+            y: 96
+            name: 门框
+            key: icon_purchase_agoalposthit
+        - text:
+            name: 门框率
+            y: 136
+            x: 15
+            text: 20.00%
+            style:
+              fontSize: 12
+              fill: '#FFF'
+        - sprite:
+            y: 167
+            name: 界外
+            key: icon_purchase_miss
+        - text:
+            name: 界外率
+            y: 220
+            x: 15
+            text: 40.00%
+            style:
+              fontSize: 12
+              fill: '#FFF'
+            area:
+              xalign: 中
+              yalign: 中
+              width: 84
+              height: 22
+  - group:
+      visible: false
+      name: 扑克区
+      x: 295
+      y: 190
+      children:
+        - sprite:
+            x: -114
+            name: 第1张
+            key: pokers
+        - sprite:
+            name: 第2张
+            key: pokers
+        - sprite:
+            x: 114
+            name: 第3张
+            key: pokers
+  - text:
+      name: 提示信息
+      x: 186
+      y: 340
+      text: 购买分布会依照购买人数多寡而变更，不影响开奖结果。
+      font: "STHeiti"
+      style:
+        fontSize: 14
+        fill: '#FFF'
+      area:
+        xalign: 中
+        yalign: 中
+        width: 328
+        height: 30
+
+  - group:
+      name: 倒计时手
+      x: 620
+      y: 470
+      children: 
+        - sprite:
+            name: 手
+            key: countdown_hand
+        - sprite:
+            name: 倒计时
+            x: 63
+            y: 96
+            key: countdown
+            frame: 4
+  - sprite:
+      visible: false
+      name: 射门结果
+      key: shoot_result
+      y: 290
+  - group:
+      x: 490
+      y: 20
+      children:
+        - button:
+            key: voice_close
+            name: 声音关
+        - button:
+            key: voice_open
+            name: 声音开
+            x: 36
+            frame: 1

@@ -1,0 +1,87 @@
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+            <p class="centered"><a href="profile.html"><img src="/static/assets/img/ui-sam.jpg" class="img-circle"
+                                                            width="60"></a></p>
+            {{if $.User}}
+            <h5 class="centered">{{$.User.Nickname}}</h5>
+            {{else}}
+            <h5 class="centered">游客</h5>
+            {{end}}
+            <li class="mt">
+                <a {{if or (eq $.Active "index")}}class="active"{{else}} {{end}} href="/admin">
+                <i class="fa fa-dashboard"></i>
+                <span>首页</span>
+                </a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-desktop"></i>
+                    <span>设计</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="/admin/general">普通</a></li>
+                    <li><a href="/admin/buttons">按钮</a></li>
+                    <li><a href="/admin/panels">框架</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-cogs"></i>
+                    <span>组件</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="/admin/calendar">日历</a></li>
+                    <li><a href="/admin/gallery">画廊</a></li>
+                    <li><a href="/admin/todo_list">日程</a></li>
+                </ul>
+            </li>
+            <!--<li class="sub-menu">-->
+            <!--<a href="javascript:;" >-->
+            <!--<i class="fa fa-book"></i>-->
+            <!--<span>Extra Pages</span>-->
+            <!--</a>-->
+            <!--<ul class="sub">-->
+            <!--<li><a  href="/admin/blank">Blank Page</a></li>-->
+            <!--<li><a  href="/login">Login</a></li>-->
+            <!--<li><a  href="/admin/lock_screen">Lock Screen</a></li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-tasks"></i>
+                    <span>表单</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="/admin/form_component">表单组件</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a {{if eq $.Active "blog"}} class="active"{{end}} href="javascript:;">
+                    <i class="fa fa-th"></i><span>基本表格</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="/admin/blog">博客</a></li>
+                    <li><a href="/admin/basic_table">基本表格</a></li>
+                    <li><a href="/admin/responsive_table">响应式表格</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>图表</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="/admin/morris">Morris</a></li>
+                    <li><a href="/admin/chartjs">Chartjs</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
